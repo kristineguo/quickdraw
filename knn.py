@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import glob
 import os
 import sys
+from util import *
 
 def load_validation_set(x_path, y_path):
     """
@@ -27,10 +28,10 @@ def load_centroids():
     centroid_files = glob.glob("centroids/npy/*.npy")
     for path in centroid_files:
         category = os.path.splitext(os.path.basename(path))[0]
-        centroids[path] = np.load(path)
+        centroids[category] = np.load(path)
     return centroids
 
-def assign_to_centroid(x_i, centroids):
+def assign_to_centroids(x_i, centroids):
     """
     Assign given example to closest centroid.
     """
@@ -45,12 +46,14 @@ def assign_to_centroid(x_i, centroids):
 
 def knn(x_val, y_val, centroids):
     num_correct = 0
+    idx_to_category, _ = get_category_mappings()
     for i, x_i in enumerate(x_val):
         results = assign_to_centroids(x_i, centroids)
-        if y_val[i] in results:
+        category = idx_to_category[int(y_val[i])]
+        if category in results:
             num_correct += 1
-        print("TRUE CATEGORY: {}".format(y_val[i]))
-        print("ASSIGNED CATEGORIES:", results)
+        #print("TRUE CATEGORY: {}".format(category))
+        #print("ASSIGNED CATEGORIES:", results)
     return num_correct
 
 def print_statistics(num_correct, num_total):
@@ -61,10 +64,11 @@ def print_statistics(num_correct, num_total):
     print("FINAL RESULTS:")
     print("NUM CORRECT:", num_correct)
     print("NUM INCORRECT:", num_total - num_correct)
+    print("ACCURACY:", 1.0*num_correct/num_total)
 
 if __name__ == "__main__":
-    x_path = "validation.npy" # TODO: Update.
-    y_path = "validation_labels.npy" #TODO: Update.
+    x_path = "data/split/val_examples.npy"
+    y_path = "data/split/val_labels.npy"
     
     x_val, y_val = load_validation_set(x_path, y_path) 
     centroids = load_centroids()

@@ -3,16 +3,27 @@ import glob
 from matplotlib import pyplot as plt
 import os
 import sys
+from collections import defaultdict
+from util import *
 
-def compute_centroids(data_files):
+def compute_centroids():
     """
     Computes centroid for each data file given.
     """
     centroids = {}
-    for path in data_files:
-        img_array = np.load(path)
-        category = os.path.splitext(os.path.basename(path))[0]
-        centroids[category] = np.sum(img_array, axis=0, dtype=float) / len(img_array)
+    cnts = defaultdict(int)
+    idx_to_category, _ = get_category_mappings()
+    train_examples = np.load("data/split/train_examples.npy")
+    train_labels = np.load("data/split/train_labels.npy")
+    for i in range(train_examples.shape[0]):
+        category = idx_to_category[int(train_labels[i])]
+        if category not in centroids:
+            centroids[category] = np.array(train_examples[i], dtype=np.float32)
+        else:
+            centroids[category] += train_examples[i]
+        cnts[category] += 1
+    for category in idx_to_category:
+        centroids[category] /= cnts[category]
     return centroids
 
 def create_centroids_dir():
@@ -41,11 +52,9 @@ def save_centroids(centroids):
         # plt.show()
 
 if __name__ == "__main__":
-    if not os.path.isdir("data"):
+    if not os.path.isdir("data/split"):
         sys.exit("Need data directory.")
-    
-    data_files = glob.glob("data/*.npy")
-    centroids = compute_centroids(data_files)
+    centroids = compute_centroids()
     create_centroids_dir() 
     save_centroids(centroids)
     print("Done computing centroids!")
