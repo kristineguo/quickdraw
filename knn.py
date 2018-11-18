@@ -8,15 +8,6 @@ import sys
 from collections import Counter, defaultdict
 from util import *
 
-def load_validation_set(x_path, y_path):
-    """
-    Load validation set for evaluation.
-    """
-    if not os.path.isfile(x_path) or not os.path.isfile(y_path):
-        sys.exit("Missing validation dataset.")
-    x_val, y_val = np.load(x_path), np.load(y_path)
-    return x_val, y_val
-
 def load_centroids():
     """
     Load centroids from centroids/npy directory.
@@ -36,8 +27,12 @@ def assign_to_centroids(x_i, centroids):
     """
     Assign given example to closest centroid.
     """
-    dist = [(np.dot(x_i, x_i) - 2.0*np.dot(x_i, centroid) + np.dot(centroid, centroid), category) for category, centroid in centroids.items()]
-    dist.sort()
+    def get_dist(x_i, centroid):
+        return np.dot(x_i, x_i) - 2.0*np.dot(x_i, centroid)\
+                + np.dot(centroid, centroid)
+
+    dist = sorted([(get_dist(x_i, centroid), category)\
+            for category, centroid in centroids.items()])
     return [category for _, category in dist[:3]]
 
 def knn(x_val, y_val, centroids):
@@ -70,10 +65,7 @@ def compute_scores(pred):
         print(category, "MAPK@3:", acc, "common guesses:", guess)
 
 if __name__ == "__main__":
-    x_path = "data/split/val_examples.npy"
-    y_path = "data/split/val_labels.npy"
-    
-    x_val, y_val = load_validation_set(x_path, y_path) 
+    x_val, y_val = load_dataset("val") 
     centroids = load_centroids()
     pred = knn(x_val, y_val, centroids)
     compute_scores(pred)

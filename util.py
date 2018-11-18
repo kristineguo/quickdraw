@@ -1,4 +1,7 @@
+# Util functions for Quick Draw dataset experiments.
 import numpy as np
+import os
+import sys
 
 def apk(actual, predicted, k=3):
     """
@@ -56,10 +59,24 @@ def mapk(actual, predicted, k=3):
     """
     return np.mean([apk(a,p,k) for a,p in zip(actual, predicted)])
 
-# Usage:
-# Give filename fname
-# Get mapping from index to category and mapping from category to index
+def load_dataset(dataset):
+    """Load dataset, one of train, val, or test."""
+
+    if dataset not in ["train", "val", "test"]:
+        sys.exit("Invalid dataset type.")
+    x_path = "data/split/{}_examples.npy".format(dataset)
+    y_path = "data/split/{}_labels.npy".format(dataset)
+    
+    if not os.path.isfile(x_path) or not os.path.isfile(y_path):
+        sys.exit("Missing dataset files.")
+    
+    return np.load(x_path), np.load(y_path)
+
 def get_category_mappings(fname = 'categories.txt'):
+    """
+    Arg: filename fname
+    Returns: Mapping from index to category and mapping from category to index
+    """
     with open(fname) as f:
         content = f.readlines()
     category_to_index = dict()

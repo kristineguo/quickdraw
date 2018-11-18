@@ -2,6 +2,8 @@ import numpy as np
 import random
 from scipy.spatial.distance import squareform, pdist
 from skimage.util import img_as_float
+import glob
+from matplotlib import pyplot as plt
 
 ### Clustering Methods
 def kmeans(features, k, num_iters=100):
