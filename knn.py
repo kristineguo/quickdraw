@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import glob
 import os
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from util import *
 
 def load_validation_set(x_path, y_path):
@@ -41,36 +41,33 @@ def assign_to_centroids(x_i, centroids):
     return [category for _, category in dist[:3]]
 
 def knn(x_val, y_val, centroids):
-    num_correct, top3_correct = defaultdict(int), defaultdict(int)
+    pred = defaultdict(list)
     idx_to_category, _ = get_category_mappings()
     for i, x_i in enumerate(x_val):
         results = assign_to_centroids(x_i, centroids)
         category = idx_to_category[int(y_val[i])]
-        if category == results[0]:
-            num_correct[category] += 1
-        if category in results:
-            top3_correct[category] += 1
-        #print("TRUE CATEGORY: {}".format(category))
-        #print("ASSIGNED CATEGORIES:", results)
-    return num_correct, top3_correct
+        pred[category].append(results)
+    return pred
 
-def print_statistics(num_correct, top3_correct, y_val):
-    """
-    Print statistics for validation set.
-    """
-    _, category_to_idx = get_category_mappings()
+def compute_scores(pred):
+    actual, predicted, per_category_mapk = [], [], []
+    for category, guesses in pred.items():
+        cur_actual, cur_predicted = [], []
+        occ = Counter()
+        for guess in guesses:
+            cur_actual.append([category])
+            cur_predicted.append(guess)
+            for cat in guess:
+                occ[cat] += 1
+        per_category_mapk.append((category, mapk(cur_actual, cur_predicted), occ.most_common(3)))
+        actual += cur_actual
+        predicted += cur_predicted
+    per_category_mapk.sort(key=lambda x: -x[1])
+
     print("="*30)
-    print("FINAL RESULTS:")
-    print("TOTAL ACCURACY:", sum(num_correct.values())/len(y_val))
-    print("TOP 3 ACCURACY:", sum(top3_correct.values())/len(y_val))
-    category_accuracy = [(cnt/np.sum(y_val == category_to_idx[category]), category) for category, cnt in num_correct.items()]
-    top3_category_accuracy = [(cnt/np.sum(y_val == category_to_idx[category]), category) for category, cnt in top3_correct.items()]
-    category_accuracy.sort(key=lambda x: -x[0])
-    top3_category_accuracy.sort(key=lambda x: -x[0])
-    for acc, category in category_accuracy:
-        print(category, "accuracy:", acc)
-    for acc, category in top3_category_accuracy:
-        print(category, "top 3 accuracy:", acc)
+    print("MAPK@3 SCORE:", mapk(actual, predicted))
+    for category, acc, guess in per_category_mapk:
+        print(category, "MAPK@3:", acc, "common guesses:", guess)
 
 if __name__ == "__main__":
     x_path = "data/split/val_examples.npy"
@@ -78,5 +75,5 @@ if __name__ == "__main__":
     
     x_val, y_val = load_validation_set(x_path, y_path) 
     centroids = load_centroids()
-    num_correct, top3_correct = knn(x_val, y_val, centroids)
-    print_statistics(num_correct, top3_correct, y_val)
+    pred = knn(x_val, y_val, centroids)
+    compute_scores(pred)
