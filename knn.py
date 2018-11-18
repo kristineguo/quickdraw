@@ -8,15 +8,6 @@ import sys
 from collections import defaultdict
 from util import *
 
-def load_validation_set(x_path, y_path):
-    """
-    Load validation set for evaluation.
-    """
-    if not os.path.isfile(x_path) or not os.path.isfile(y_path):
-        sys.exit("Missing validation dataset.")
-    x_val, y_val = np.load(x_path), np.load(y_path)
-    return x_val, y_val
-
 def load_centroids():
     """
     Load centroids from centroids/npy directory.
@@ -36,8 +27,12 @@ def assign_to_centroids(x_i, centroids):
     """
     Assign given example to closest centroid.
     """
-    dist = [(np.dot(x_i, x_i) - 2.0*np.dot(x_i, centroid) + np.dot(centroid, centroid), category) for category, centroid in centroids.items()]
-    dist.sort()
+    def get_dist(x_i, centroid):
+        return np.dot(x_i, x_i) - 2.0*np.dot(x_i, centroid)\
+                + np.dot(centroid, centroid)
+
+    dist = sorted([(get_dist(x_i, centroid), category)\
+            for category, centroid in centroids.items()])
     return [category for _, category in dist[:3]]
 
 def knn(x_val, y_val, centroids):
@@ -54,29 +49,8 @@ def knn(x_val, y_val, centroids):
         #print("ASSIGNED CATEGORIES:", results)
     return num_correct, top3_correct
 
-def print_statistics(num_correct, top3_correct, y_val):
-    """
-    Print statistics for validation set.
-    """
-    _, category_to_idx = get_category_mappings()
-    print("="*30)
-    print("FINAL RESULTS:")
-    print("TOTAL ACCURACY:", sum(num_correct.values())/len(y_val))
-    print("TOP 3 ACCURACY:", sum(top3_correct.values())/len(y_val))
-    category_accuracy = [(cnt/np.sum(y_val == category_to_idx[category]), category) for category, cnt in num_correct.items()]
-    top3_category_accuracy = [(cnt/np.sum(y_val == category_to_idx[category]), category) for category, cnt in top3_correct.items()]
-    category_accuracy.sort(key=lambda x: -x[0])
-    top3_category_accuracy.sort(key=lambda x: -x[0])
-    for acc, category in category_accuracy:
-        print(category, "accuracy:", acc)
-    for acc, category in top3_category_accuracy:
-        print(category, "top 3 accuracy:", acc)
-
 if __name__ == "__main__":
-    x_path = "data/split/val_examples.npy"
-    y_path = "data/split/val_labels.npy"
-    
-    x_val, y_val = load_validation_set(x_path, y_path) 
+    x_val, y_val = load_dataset("val") 
     centroids = load_centroids()
     num_correct, top3_correct = knn(x_val, y_val, centroids)
     print_statistics(num_correct, top3_correct, y_val)
