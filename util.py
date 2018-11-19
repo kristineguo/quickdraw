@@ -2,6 +2,7 @@
 import numpy as np
 import os
 import sys
+from collections import Counter
 
 def apk(actual, predicted, k=3):
     """
