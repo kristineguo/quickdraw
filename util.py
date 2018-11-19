@@ -70,7 +70,7 @@ def load_dataset(dataset):
     if not os.path.isfile(x_path) or not os.path.isfile(y_path):
         sys.exit("Missing dataset files.")
     
-    return np.load(x_path), np.load(y_path)
+    return np.load(x_path), np.asarray(np.load(y_path), dtype=np.int32)
 
 def get_category_mappings(fname = 'categories.txt'):
     """
