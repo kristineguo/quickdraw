@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import glob
 import os
 import sys
-from collections import Counter, defaultdict
+from collections import defaultdict
 from util import *
 
 def load_centroids():
