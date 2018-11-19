@@ -29,6 +29,7 @@ def cnn_model_fn(features, labels, mode):
   # Input Layer
   # Reshape X to 4-D tensor: [batch_size, width, height, channels]
   # MNIST images are 28x28 pixels, and have one color channel
+  #print(features["x"].shape)
   input_layer = tf.reshape(features["x"], [-1, 28, 28, 1])
 
   # Convolutional Layer #1
@@ -120,6 +121,10 @@ def main(unused_argv):
   # Load training and eval data
   train_data, train_labels = load_dataset("train")
   eval_data, eval_labels = load_dataset("val")
+  train_data = train_data.astype(float)
+  eval_data = eval_data.astype(float)
+  train_data = (train_data - np.mean(train_data, axis = 1)[:,None])/np.std(train_data, axis = 1)[:,None]
+  eval_data = (eval_data - np.mean(eval_data, axis = 1)[:,None])/np.std(eval_data, axis = 1)[:,None]
 
   # Create the Estimator
   classifier = tf.estimator.Estimator(
@@ -140,7 +145,7 @@ def main(unused_argv):
       shuffle=True)
   classifier.train(
       input_fn=train_input_fn,
-      steps=20000,
+      steps=1000,
       hooks=[logging_hook])
 
   # Evaluate the model and print results
