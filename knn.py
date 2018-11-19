@@ -44,26 +44,6 @@ def knn(x_val, y_val, centroids):
         pred[category].append(results)
     return pred
 
-def compute_scores(pred):
-    actual, predicted, per_category_mapk = [], [], []
-    for category, guesses in pred.items():
-        cur_actual, cur_predicted = [], []
-        occ = Counter()
-        for guess in guesses:
-            cur_actual.append([category])
-            cur_predicted.append(guess)
-            for cat in guess:
-                occ[cat] += 1
-        per_category_mapk.append((category, mapk(cur_actual, cur_predicted), occ.most_common(3)))
-        actual += cur_actual
-        predicted += cur_predicted
-    per_category_mapk.sort(key=lambda x: -x[1])
-
-    print("="*30)
-    print("MAPK@3 SCORE:", mapk(actual, predicted))
-    for category, acc, guess in per_category_mapk:
-        print(category, "MAPK@3:", acc, "common guesses:", guess)
-
 if __name__ == "__main__":
     x_val, y_val = load_dataset("val") 
     centroids = load_centroids()
