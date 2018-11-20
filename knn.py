@@ -15,7 +15,7 @@ def load_centroids():
     """
     if not os.path.isdir("centroids") or not os.path.isdir("centroids/npy"):
         sys.exit("Need centroids/npy directory.")
-    
+
     centroids = {}
     centroid_files = glob.glob("centroids/npy/*.npy")
     for path in centroid_files:
@@ -45,7 +45,7 @@ def knn(x_val, y_val, centroids):
     return pred
 
 if __name__ == "__main__":
-    x_val, y_val = load_dataset("val") 
+    x_val, y_val = load_dataset("val")
     centroids = load_centroids()
     pred = knn(x_val, y_val, centroids)
     compute_scores(pred)
