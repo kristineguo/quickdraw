@@ -28,12 +28,13 @@ def load_centroids():
     return centroids, labels
 
 if __name__ == "__main__":
-    k = 10
     x_train, y_train = load_centroids()
     x_val, y_val = load_dataset("val")
     y_train = y_train.astype(int)
     y_val = y_val.astype(int)
-
     dists = compute_distances(x_val, x_train)
-    pred = predict_labels(dists, y_train, y_val, k)
-    compute_scores(pred)
+    
+    for k in range(1, 21):
+        pred = predict_labels_weighted(dists, y_train, y_val, k)
+        curr_score = compute_scores(pred)
+        print(k, curr_score)
