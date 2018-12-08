@@ -60,3 +60,21 @@ def predict_labels(dists, y_train, y_val, k=1):
         y_pred[y_val[i]].append([cat for cat, _ in top[:3]])
     
     return y_pred
+
+def predict_labels_weighted(dists, y_train, y_val, k=1):
+    num_test, num_train = dists.shape
+    y_pred = defaultdict(list)
+
+    for i in range(num_test):
+        indices = np.argpartition(dists[i], k)[:k]
+        closest = sorted([(y_train[j], dists[i][j]) for j in indices], key=lambda a: a[1])
+        
+        weights = np.linspace(1.0, 0.0, k)
+        votes = defaultdict(float)
+        for j in range(k):
+            votes[closest[j][0]] += weights[j]
+
+        top = [(j, votes[j]) for j in sorted(votes, key=votes.get, reverse=True)]
+        y_pred[y_val[i]].append([cat for cat, _ in top[:3]])
+    
+    return y_pred

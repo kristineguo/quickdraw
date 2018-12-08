@@ -103,7 +103,8 @@ def compute_scores(pred):
         predicted += cur_predicted
     per_category_mapk.sort(key=lambda x: -x[1])
 
-    print("="*30)
-    print("MAPK@3 SCORE:", mapk(actual, predicted))
-    for category, acc, guess in per_category_mapk:
-        print(category, "MAPK@3:", acc, "common guesses:", guess)
+    #print("="*30)
+    #print("MAPK@3 SCORE:", mapk(actual, predicted))
+    #for category, acc, guess in per_category_mapk:
+    #    print(category, "MAPK@3:", acc, "common guesses:", guess)
+    return mapk(actual, predicted)
