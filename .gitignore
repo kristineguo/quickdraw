@@ -1,3 +1,6 @@
 .DS_Store
 data/
+dists.npy
+svm.joblib
+svm_lin.joblib
 __pycache__/
