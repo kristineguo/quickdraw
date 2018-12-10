@@ -19,14 +19,22 @@ class Model(object):
 
     def add_prediction_op(self):
         conv = [self.X]
-        conv.append(tf.layers.conv2d(inputs=conv[-1], filters=3, kernel_size=[3, 3], strides=[1, 1], padding="SAME", activation=tf.nn.relu))
+        conv.append(tf.layers.conv2d(inputs=conv[-1], filters=5, kernel_size=[3, 3], strides=[1, 1], padding="SAME", activation=tf.nn.relu))
+        print(conv[-1].get_shape())
+        conv.append(tf.layers.conv2d(inputs=conv[-1], filters=5, kernel_size=[3, 3], strides=[1, 1], padding="SAME", activation=tf.nn.relu))
+        print(conv[-1].get_shape())
+        conv.append(tf.layers.conv2d(inputs=conv[-1], filters=5, kernel_size=[3, 3], strides=[1, 1], padding="SAME", activation=tf.nn.relu))
         print(conv[-1].get_shape())
         conv.append(tf.nn.max_pool(conv[-1], ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME'))
         print(conv[-1].get_shape())
-        pool_flat = tf.reshape(conv[-1], [-1, 14 * 14 * 3])
-        h = tf.layers.dense(inputs=pool_flat, units=400, activation=tf.nn.relu)
-        h_drop = tf.layers.dropout(inputs=h, rate=0.5, training=self.is_training)
-        pred = tf.layers.dense(inputs=h, units=345)
+        pool_flat = tf.reshape(conv[-1], [-1, 14 * 14 * 5])
+        h1 = tf.layers.dense(inputs=pool_flat, units=700, activation=tf.nn.relu)
+        h1_drop = tf.layers.dropout(inputs=h1, rate=0.2, training=self.is_training)
+        h2 = tf.layers.dense(inputs=h1_drop, units=500, activation=tf.nn.relu)
+        h2_drop = tf.layers.dropout(inputs=h2, rate=0.2, training=self.is_training)
+        h3 = tf.layers.dense(inputs=h2_drop, units=400, activation=tf.nn.relu)
+        h3_drop = tf.layers.dropout(inputs=h3, rate=0.2, training=self.is_training)
+        pred = tf.layers.dense(inputs=h3_drop, units=345)
         return pred
         
     def add_loss_op(self, pred):

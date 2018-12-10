@@ -88,7 +88,7 @@ def get_category_mappings(fname = 'categories.txt'):
         category_to_index[category_name] = i
     return index_to_category, category_to_index
 
-def compute_scores(pred):
+def compute_scores(pred, verbose=False):
     actual, predicted, per_category_mapk = [], [], []
     for category, guesses in pred.items():
         cur_actual, cur_predicted = [], []
@@ -103,8 +103,9 @@ def compute_scores(pred):
         predicted += cur_predicted
     per_category_mapk.sort(key=lambda x: -x[1])
 
-    #print("="*30)
-    #print("MAPK@3 SCORE:", mapk(actual, predicted))
-    #for category, acc, guess in per_category_mapk:
-    #    print(category, "MAPK@3:", acc, "common guesses:", guess)
+    if verbose:
+        print("="*30)
+        print("MAPK@3:", mapk(actual, predicted))
+        for category, acc, guess in per_category_mapk:
+            print(category, "MAPK@3:", acc, "common guesses:", guess)
     return mapk(actual, predicted)
