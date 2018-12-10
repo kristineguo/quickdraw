@@ -115,12 +115,12 @@ def get_groupings(per_category_mapk, num=2):
             if cat not in assignments:
                 assignments[cat] = assignment
                 groupings[assignment].add(cat)
-    print assignments
+    print (assignments)
     for i, grouping in groupings.items():
-        print "="*10
-        print "GROUP", i
+        print ("="*10)
+        print ("GROUP", i)
         for g in grouping:
-            print "\t", index_to_category[g]
+            print ("\t", index_to_category[g])
 
 
 def plot_accuracies(acc_vals):
