@@ -45,23 +45,7 @@ def group_centroids(centroids, labels):
             print "\t", idx_to_cat[int(cat)]
     return kmeans.cluster_centers_, group_to_category, category_to_group
 
-
-if __name__ == "__main__":
-    x_train, y_train = load_centroids()
-    #groups, group_to_category, category_to_group = group_centroids(x_train, y_train)
-    x_val, y_val = load_dataset("val")
-    y_train = y_train.astype(int)
-    y_val = y_val.astype(int)
-    dists = compute_distances(x_val, x_train)
-    
-    scores = []
-    accs = []
-    for k in range(1, 36):
-        pred = predict_labels_weighted(dists, y_train, y_val, k)
-        curr_score, acc = compute_scores(pred)
-        print(k, curr_score, acc/len(y_val))
-        scores.append(curr_score)
-        accs.append(acc)
+def plot_scores(scores, accs, k, plot_accs=False):
     plt.figure()
     plt.plot(list(range(1, k+1)), scores, color='r', label='MAP@3')
     plt.plot(list(range(1, k+1)), accs, linestyle='dashed', color='b', label='MAP@1')
@@ -70,3 +54,22 @@ if __name__ == "__main__":
     plt.ylabel('MAP@3 Score')
     plt.legend()
     plt.show()
+
+if __name__ == "__main__":
+    x_train, y_train = load_centroids()
+    #groups, group_to_category, category_to_group = group_centroids(x_train, y_train)
+    x_val, y_val = load_dataset("test")
+    y_train = y_train.astype(int)
+    y_val = y_val.astype(int)
+    dists = compute_distances(x_val, x_train, "dists_test")
+    
+    scores = []
+    accs = []
+    for k in range(29, 30):
+        pred = predict_labels_weighted(dists, y_train, y_val, k)
+        curr_score, acc = compute_scores(pred)
+        print(k, curr_score, acc/len(y_val))
+        scores.append(curr_score)
+        accs.append(acc/len(y_val))
+
+    # plot_scores(scores, accs, k)

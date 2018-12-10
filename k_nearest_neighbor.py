@@ -6,7 +6,7 @@ import os
 def round_to_1(x):
     return round(x, -int(floor(log10(abs(x)))))
 
-def compute_distances(X1, X2):
+def compute_distances(X1, X2, name="dists"):
     """Compute the L2 distance between each point in X1 and each point in X2.
     It's possible to vectorize the computation entirely (i.e. not use any loop).
 
@@ -24,8 +24,8 @@ def compute_distances(X1, X2):
     dists = np.zeros((M, N))
     
     print("Computing Distances")
-    if os.path.isfile("dists.npy"):
-        dists = np.load("dists.npy")
+    if os.path.isfile(name+".npy"):
+        dists = np.load(name+".npy")
     else:
         benchmark = int(round_to_1(M)//10)
         for i in range(len(X1)):
@@ -33,7 +33,7 @@ def compute_distances(X1, X2):
             dists[i,j] = np.linalg.norm(X1[i] - X2[j])
           if i % benchmark == 0:
             print(str(i//benchmark)+"0% complete")
-        np.save("dists", dists)
+        np.save(name, dists)
     
     print("Distances Computed")
     return dists
