@@ -55,14 +55,18 @@ if __name__ == "__main__":
     dists = compute_distances(x_val, x_train)
     
     scores = []
-    for k in range(29,30):
+    accs = []
+    for k in range(1, 36):
         pred = predict_labels_weighted(dists, y_train, y_val, k)
-        curr_score = compute_scores(pred)
-        print(k, curr_score)
+        curr_score, acc = compute_scores(pred)
+        print(k, curr_score, acc/len(y_val))
         scores.append(curr_score)
-    #plt.figure()
-    #plt.plot(list(range(1, k+1)), scores)
-    #plt.title('MAP@3 Score vs. k for KNN')
-    #plt.xlabel('k')
-    #plt.ylabel('MAP@3 Score')
-    #plt.show()
+        accs.append(acc)
+    plt.figure()
+    plt.plot(list(range(1, k+1)), scores, color='r', label='MAP@3')
+    plt.plot(list(range(1, k+1)), accs, linestyle='dashed', color='b', label='MAP@1')
+    plt.title('MAP@3 Score vs. k for KNN (K-Means++, Weighted by Rank)')
+    plt.xlabel('k')
+    plt.ylabel('MAP@3 Score')
+    plt.legend()
+    plt.show()

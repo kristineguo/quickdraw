@@ -135,6 +135,7 @@ def plot_accuracies(acc_vals):
 def compute_scores(pred):
     actual, predicted, per_category_mapk = [], [], []
     cm = np.zeros((len(pred), len(pred)))
+    total_accuracy = 0.0
     for category, guesses in pred.items():
         cur_actual, cur_predicted = [], []
         occ = Counter()
@@ -144,6 +145,8 @@ def compute_scores(pred):
             for cat in guess:
                 occ[cat] += 1
                 cm[category][cat] += 1.0
+            if guess[0] == category:
+                total_accuracy += 1
         per_category_mapk.append((category, mapk(cur_actual, cur_predicted), occ.most_common(3)))
         actual += cur_actual
         predicted += cur_predicted
@@ -151,12 +154,12 @@ def compute_scores(pred):
 
     # Get MAP@3 scores for all categories
     index_to_category, _ = get_category_mappings()
-    print("="*30)
-    print("MAPK@3 SCORE:", mapk(actual, predicted))
+    #print("="*30)
+    #print("MAPK@3 SCORE:", mapk(actual, predicted))
     acc_vals = []
     for category, acc, guess in per_category_mapk:
-        print(index_to_category[category], "MAPK@3:", acc, "common guesses:",\
-                [(index_to_category[g[0]], g[1]) for g in guess])
+    #    print(index_to_category[category], "MAPK@3:", acc, "common guesses:",\
+    #            [(index_to_category[g[0]], g[1]) for g in guess])
         acc_vals.append(acc)
     
     # Get groupings of categories based on common guesses
@@ -168,5 +171,4 @@ def compute_scores(pred):
     # Plot confusion matrix
     # plot_confusion_matrix(cm, list(range(0, 10)), normalize=True,\
     #        title='Confusion matrix')
-    
-    return mapk(actual, predicted)
+    return mapk(actual, predicted), total_accuracy
