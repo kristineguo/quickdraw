@@ -1,0 +1,541 @@
+(?, 28, 28, 5)
+(?, 28, 28, 5)
+(?, 28, 28, 5)
+(?, 14, 14, 5)
+Running on Epoch 0...
+Training...
+loss: 3.2387080427309765
+MAPK@3: 0.3711020762797902
+Accuracy: 0.2904647901290533
+Evaluating...
+loss: 2.404951396300979
+MAPK@3: 0.5326195668935738
+Accuracy: 0.44201969466657853
+New best validation score! Saving model weights...
+Running on Epoch 1...
+Training...
+loss: 2.470622552403084
+MAPK@3: 0.5181009854891795
+Accuracy: 0.4255160006233089
+Evaluating...
+loss: 2.2047409607794535
+MAPK@3: 0.5745731720749897
+Accuracy: 0.48339171237856055
+New best validation score! Saving model weights...
+Running on Epoch 2...
+Training...
+loss: 2.2960230332229314
+MAPK@3: 0.5521218474498637
+Accuracy: 0.45974132679803376
+Evaluating...
+loss: 2.133119264087517
+MAPK@3: 0.5904302425484105
+Accuracy: 0.500839336461569
+New best validation score! Saving model weights...
+Running on Epoch 3...
+Training...
+loss: 2.204133110854804
+MAPK@3: 0.5704084090039807
+Accuracy: 0.4785142581915542
+Evaluating...
+loss: 2.0447058795118447
+MAPK@3: 0.6068689004912652
+Accuracy: 0.5175996298988831
+New best validation score! Saving model weights...
+Running on Epoch 4...
+Training...
+loss: 2.143279529979634
+MAPK@3: 0.5827820354813882
+Accuracy: 0.49169157541329633
+Evaluating...
+loss: 2.05312755148204
+MAPK@3: 0.6079858127905183
+Accuracy: 0.5199656334677153
+New best validation score! Saving model weights...
+Running on Epoch 5...
+Training...
+loss: 2.099680089874912
+MAPK@3: 0.5900275294773178
+Accuracy: 0.49872929976909236
+Evaluating...
+loss: 2.0107710668702934
+MAPK@3: 0.6160773687572974
+Accuracy: 0.5285043949507633
+New best validation score! Saving model weights...
+Running on Epoch 6...
+Training...
+loss: 2.0683487005484587
+MAPK@3: 0.5966747413504082
+Accuracy: 0.5060361802496068
+Evaluating...
+loss: 2.0278199027507067
+MAPK@3: 0.6133588879342631
+Accuracy: 0.5251206133104223
+Running on Epoch 7...
+Training...
+loss: 2.041529533820916
+MAPK@3: 0.6015101075207888
+Accuracy: 0.5107846609341135
+Evaluating...
+loss: 1.9812078853238222
+MAPK@3: 0.6219615359196352
+Accuracy: 0.5348622034234354
+New best validation score! Saving model weights...
+Running on Epoch 8...
+Training...
+loss: 2.0211155482724106
+MAPK@3: 0.6054038994583824
+Accuracy: 0.5149154991429502
+Evaluating...
+loss: 2.040067023933569
+MAPK@3: 0.6105963474544533
+Accuracy: 0.5232701077258608
+Running on Epoch 9...
+Training...
+loss: 2.0123984424557744
+MAPK@3: 0.60706227894963
+Accuracy: 0.516623932229321
+Evaluating...
+loss: 2.0199620321739533
+MAPK@3: 0.6161500671909764
+Accuracy: 0.5296807877866632
+Running on Epoch 10...
+Training...
+loss: 2.0012076972131765
+MAPK@3: 0.609056867494912
+Accuracy: 0.5189358416795342
+Evaluating...
+loss: 2.027504371991872
+MAPK@3: 0.6144890181305488
+Accuracy: 0.5266142356751041
+Running on Epoch 11...
+Training...
+loss: 1.9933951502589857
+MAPK@3: 0.6111170923583269
+Accuracy: 0.5208057684407361
+Evaluating...
+loss: 2.0651299603897733
+MAPK@3: 0.6072412045910163
+Accuracy: 0.5198731081884872
+Running on Epoch 12...
+Training...
+loss: 1.9788464552634109
+MAPK@3: 0.613147568386905
+Accuracy: 0.5231885084500857
+Evaluating...
+loss: 2.05352248555762
+MAPK@3: 0.6104377326900625
+Accuracy: 0.5232965435199259
+Running on Epoch 13...
+Training...
+loss: 1.979714878558672
+MAPK@3: 0.6135413862957033
+Accuracy: 0.5236248246943661
+Evaluating...
+loss: 2.0336628536845387
+MAPK@3: 0.6169651708413192
+Accuracy: 0.5316370365474853
+Running on Epoch 14...
+Training...
+loss: 1.973347567550077
+MAPK@3: 0.615052910427675
+Accuracy: 0.5248374438667819
+Evaluating...
+loss: 2.0743949990443906
+MAPK@3: 0.6082920274051065
+Accuracy: 0.520890886259996
+Running on Epoch 15...
+Training...
+loss: 1.9729986428349942
+MAPK@3: 0.6150118287033757
+Accuracy: 0.5255004179002989
+Evaluating...
+loss: 2.033304133475709
+MAPK@3: 0.6163417266979491
+Accuracy: 0.5295221730222721
+Running on Epoch 16...
+Training...
+loss: 1.964457832599697
+MAPK@3: 0.6167854259041523
+Accuracy: 0.5272315167655933
+Evaluating...
+loss: 2.0817617061274283
+MAPK@3: 0.6097724318727558
+Accuracy: 0.5233361972110238
+Running on Epoch 17...
+Training...
+loss: 1.9656422227431922
+MAPK@3: 0.6162074485415987
+Accuracy: 0.5262710543837033
+Evaluating...
+loss: 2.120457917237633
+MAPK@3: 0.6001696296785848
+Accuracy: 0.5139779261119556
+Running on Epoch 18...
+Training...
+loss: 1.9661486041297325
+MAPK@3: 0.6164189958115531
+Accuracy: 0.5275686702270828
+Evaluating...
+loss: 2.064887816356556
+MAPK@3: 0.6129006675038001
+Accuracy: 0.5264820567047783
+Running on Epoch 19...
+Training...
+loss: 1.9598011578685595
+MAPK@3: 0.6182053425129737
+Accuracy: 0.5288521199586349
+Evaluating...
+loss: 2.074714683175848
+MAPK@3: 0.6101050822814089
+Accuracy: 0.5240631815478157
+Restoring best weights...
+Running model on test set...
+==============================
+MAPK@3: 0.620887839786194
+TOTAL ACCURACY: 0.5335742166895242
+envelope MAPK@3: 0.9236453201970444 common guesses: [('envelope', 191), ('postcard', 175), ('pool', 70)]
+line MAPK@3: 0.9066358024691357 common guesses: [('line', 198), ('ocean', 126), ('The Great Wall of China', 96)]
+apple MAPK@3: 0.8990825688073395 common guesses: [('apple', 202), ('blueberry', 165), ('strawberry', 83)]
+snowman MAPK@3: 0.8881278538812785 common guesses: [('snowman', 470), ('vase', 137), ('yoga', 103)]
+rainbow MAPK@3: 0.8830715532286214 common guesses: [('rainbow', 176), ('boomerang', 125), ('bridge', 117)]
+donut MAPK@3: 0.8742138364779873 common guesses: [('donut', 197), ('smiley face', 48), ('eye', 40)]
+crown MAPK@3: 0.8737623762376238 common guesses: [('crown', 183), ('castle', 158), ('fence', 38)]
+triangle MAPK@3: 0.8729729729729729 common guesses: [('triangle', 168), ('tent', 149), ('mountain', 116)]
+The Eiffel Tower MAPK@3: 0.8669950738916257 common guesses: [('The Eiffel Tower', 184), ('tent', 84), ('pliers', 61)]
+lollipop MAPK@3: 0.8642611683848797 common guesses: [('lollipop', 181), ('stop sign', 154), ('spoon', 58)]
+washing machine MAPK@3: 0.8571428571428571 common guesses: [('washing machine', 162), ('dishwasher', 106), ('power outlet', 84)]
+giraffe MAPK@3: 0.8534031413612565 common guesses: [('giraffe', 173), ('horse', 72), ('flamingo', 56)]
+snail MAPK@3: 0.8449419568822553 common guesses: [('snail', 179), ('garden hose', 52), ('roller coaster', 40)]
+popsicle MAPK@3: 0.8429319371727748 common guesses: [('popsicle', 166), ('hot air balloon', 68), ('screwdriver', 57)]
+chair MAPK@3: 0.8427860696517412 common guesses: [('chair', 294), ('skyscraper', 81), ('bench', 77)]
+headphones MAPK@3: 0.8417132216014899 common guesses: [('headphones', 155), ('bicycle', 79), ('stethoscope', 52)]
+tennis racquet MAPK@3: 0.840057636887608 common guesses: [('tennis racquet', 316), ('fan', 123), ('microphone', 111)]
+ladder MAPK@3: 0.837742504409171 common guesses: [('ladder', 167), ('chair', 114), ('skyscraper', 74)]
+t-shirt MAPK@3: 0.8324468085106383 common guesses: [('t-shirt', 170), ('sweater', 143), ('jacket', 90)]
+swing set MAPK@3: 0.8314814814814814 common guesses: [('swing set', 159), ('table', 73), ('tent', 50)]
+sailboat MAPK@3: 0.8308943089430894 common guesses: [('sailboat', 181), ('cruise ship', 109), ('speedboat', 100)]
+skateboard MAPK@3: 0.8298969072164949 common guesses: [('skateboard', 168), ('crocodile', 64), ('bathtub', 47)]
+wine glass MAPK@3: 0.8283082077051926 common guesses: [('wine glass', 178), ('hourglass', 89), ('floor lamp', 71)]
+microwave MAPK@3: 0.8282312925170067 common guesses: [('microwave', 176), ('oven', 165), ('picture frame', 81)]
+umbrella MAPK@3: 0.8270944741532977 common guesses: [('umbrella', 166), ('mushroom', 125), ('floor lamp', 48)]
+door MAPK@3: 0.8268876611418049 common guesses: [('door', 165), ('skyscraper', 78), ('remote control', 60)]
+laptop MAPK@3: 0.8256997455470738 common guesses: [('laptop', 348), ('computer', 310), ('calendar', 84)]
+stairs MAPK@3: 0.8256013745704467 common guesses: [('stairs', 164), ('squiggle', 85), ('zigzag', 72)]
+hand MAPK@3: 0.8234398782343987 common guesses: [('hand', 380), ('finger', 236), ('cactus', 111)]
+palm tree MAPK@3: 0.8233151183970856 common guesses: [('palm tree', 166), ('lighthouse', 80), ('windmill', 71)]
+ice cream MAPK@3: 0.8225225225225227 common guesses: [('ice cream', 166), ('parachute', 81), ('carrot', 63)]
+bicycle MAPK@3: 0.8201754385964912 common guesses: [('bicycle', 175), ('motorbike', 174), ('tractor', 78)]
+square MAPK@3: 0.8200354609929078 common guesses: [('square', 165), ('suitcase', 123), ('door', 65)]
+hourglass MAPK@3: 0.8129084967320261 common guesses: [('hourglass', 175), ('wine glass', 137), ('vase', 124)]
+harp MAPK@3: 0.8123543123543123 common guesses: [('harp', 364), ('watermelon', 142), ('backpack', 102)]
+diamond MAPK@3: 0.8106060606060606 common guesses: [('diamond', 177), ('parachute', 106), ('ice cream', 67)]
+pants MAPK@3: 0.8087557603686636 common guesses: [('pants', 196), ('shorts', 159), ('tooth', 96)]
+house plant MAPK@3: 0.8081081081081081 common guesses: [('house plant', 160), ('pineapple', 61), ('vase', 53)]
+pineapple MAPK@3: 0.8031914893617021 common guesses: [('pineapple', 163), ('strawberry', 87), ('vase', 42)]
+fish MAPK@3: 0.8003300330033003 common guesses: [('fish', 177), ('whale', 116), ('shark', 79)]
+banana MAPK@3: 0.7983405483405485 common guesses: [('banana', 410), ('string bean', 168), ('moon', 127)]
+tornado MAPK@3: 0.796124031007752 common guesses: [('tornado', 195), ('hurricane', 189), ('tennis racquet', 53)]
+traffic light MAPK@3: 0.7936507936507936 common guesses: [('traffic light', 160), ('power outlet', 74), ('streetlight', 73)]
+eyeglasses MAPK@3: 0.7935103244837758 common guesses: [('eyeglasses', 284), ('motorbike', 92), ('binoculars', 73)]
+star MAPK@3: 0.7930756843800323 common guesses: [('star', 172), ('airplane', 87), ('ceiling fan', 53)]
+pear MAPK@3: 0.787878787878788 common guesses: [('pear', 151), ('vase', 78), ('apple', 56)]
+octopus MAPK@3: 0.7876106194690266 common guesses: [('octopus', 186), ('frog', 85), ('spider', 33)]
+circle MAPK@3: 0.7864864864864864 common guesses: [('circle', 165), ('potato', 136), ('moon', 90)]
+table MAPK@3: 0.7849740932642487 common guesses: [('table', 166), ('bench', 123), ('swing set', 46)]
+bowtie MAPK@3: 0.7848639455782314 common guesses: [('bowtie', 166), ('bat', 75), ('fish', 66)]
+wine bottle MAPK@3: 0.781578947368421 common guesses: [('wine bottle', 157), ('vase', 70), ('pear', 46)]
+helicopter MAPK@3: 0.7743055555555555 common guesses: [('helicopter', 197), ('submarine', 69), ('whale', 52)]
+hammer MAPK@3: 0.7737430167597765 common guesses: [('hammer', 160), ('axe', 82), ('mailbox', 67)]
+sun MAPK@3: 0.7736318407960199 common guesses: [('sun', 173), ('spider', 148), ('light bulb', 79)]
+picture frame MAPK@3: 0.772644927536232 common guesses: [('picture frame', 163), ('oven', 144), ('microwave', 70)]
+stop sign MAPK@3: 0.7722222222222223 common guesses: [('stop sign', 153), ('lollipop', 66), ('cookie', 43)]
+mountain MAPK@3: 0.7702936096718481 common guesses: [('mountain', 165), ('tent', 97), ('roller coaster', 55)]
+television MAPK@3: 0.7684684684684684 common guesses: [('television', 153), ('radio', 99), ('oven', 74)]
+anvil MAPK@3: 0.7684210526315789 common guesses: [('anvil', 156), ('underwear', 63), ('t-shirt', 34)]
+bus MAPK@3: 0.7666666666666666 common guesses: [('bus', 215), ('school bus', 202), ('firetruck', 126)]
+butterfly MAPK@3: 0.7645951035781543 common guesses: [('butterfly', 145), ('bee', 39), ('squirrel', 37)]
+fork MAPK@3: 0.7640350877192984 common guesses: [('fork', 154), ('rake', 55), ('paintbrush', 42)]
+snowflake MAPK@3: 0.7632575757575757 common guesses: [('snowflake', 142), ('ceiling fan', 70), ('windmill', 44)]
+bandage MAPK@3: 0.7597597597597597 common guesses: [('bandage', 178), ('bread', 103), ('belt', 50)]
+camera MAPK@3: 0.7568728522336768 common guesses: [('camera', 163), ('map', 80), ('washing machine', 73)]
+jacket MAPK@3: 0.7556935817805384 common guesses: [('jacket', 275), ('sweater', 235), ('t-shirt', 141)]
+teddy-bear MAPK@3: 0.7549382716049382 common guesses: [('teddy-bear', 224), ('panda', 147), ('bear', 141)]
+eye MAPK@3: 0.7548500881834215 common guesses: [('eye', 154), ('bandage', 52), ('bread', 31)]
+flashlight MAPK@3: 0.7541666666666667 common guesses: [('flashlight', 289), ('megaphone', 111), ('wristwatch', 65)]
+bucket MAPK@3: 0.7540106951871658 common guesses: [('bucket', 157), ('paint can', 122), ('purse', 41)]
+hamburger MAPK@3: 0.7538461538461538 common guesses: [('hamburger', 172), ('sandwich', 90), ('basket', 46)]
+cookie MAPK@3: 0.7516835016835016 common guesses: [('cookie', 172), ('potato', 121), ('clock', 43)]
+The Mona Lisa MAPK@3: 0.7513661202185792 common guesses: [('The Mona Lisa', 152), ('passport', 59), ('map', 37)]
+windmill MAPK@3: 0.749084249084249 common guesses: [('windmill', 147), ('palm tree', 96), ('fan', 38)]
+soccer ball MAPK@3: 0.7469135802469136 common guesses: [('soccer ball', 162), ('brain', 60), ('basketball', 57)]
+candle MAPK@3: 0.7449139280125197 common guesses: [('candle', 176), ('lighter', 95), ('lipstick', 62)]
+carrot MAPK@3: 0.7420435510887772 common guesses: [('carrot', 166), ('paintbrush', 62), ('ice cream', 48)]
+dumbbell MAPK@3: 0.7412095639943742 common guesses: [('dumbbell', 189), ('key', 106), ('eyeglasses', 71)]
+tent MAPK@3: 0.7407407407407407 common guesses: [('tent', 167), ('triangle', 71), ('mountain', 62)]
+clock MAPK@3: 0.7394106813996316 common guesses: [('clock', 160), ('compass', 149), ('blueberry', 63)]
+paper clip MAPK@3: 0.7382198952879581 common guesses: [('paper clip', 152), ('flip flops', 81), ('ear', 63)]
+mushroom MAPK@3: 0.736760124610592 common guesses: [('mushroom', 174), ('umbrella', 103), ('light bulb', 36)]
+penguin MAPK@3: 0.7353455818022746 common guesses: [('penguin', 310), ('parrot', 154), ('owl', 141)]
+skull MAPK@3: 0.7350877192982456 common guesses: [('skull', 155), ('light bulb', 65), ('mushroom', 40)]
+saxophone MAPK@3: 0.7303370786516854 common guesses: [('saxophone', 145), ('swan', 85), ('snorkel', 46)]
+tree MAPK@3: 0.7301223241590215 common guesses: [('tree', 187), ('broccoli', 165), ('palm tree', 56)]
+rollerskates MAPK@3: 0.7296296296296295 common guesses: [('rollerskates', 148), ('truck', 87), ('tractor', 69)]
+ear MAPK@3: 0.7279279279279279 common guesses: [('ear', 148), ('steak', 39), ('potato', 35)]
+shorts MAPK@3: 0.7269503546099291 common guesses: [('shorts', 157), ('pants', 125), ('underwear', 117)]
+house MAPK@3: 0.7254901960784313 common guesses: [('house', 176), ('barn', 155), ('church', 128)]
+hot air balloon MAPK@3: 0.7219298245614034 common guesses: [('hot air balloon', 166), ('light bulb', 134), ('skull', 39)]
+strawberry MAPK@3: 0.7210144927536232 common guesses: [('strawberry', 155), ('pineapple', 85), ('apple', 55)]
+calculator MAPK@3: 0.7193436960276339 common guesses: [('calculator', 156), ('calendar', 95), ('dishwasher', 52)]
+zigzag MAPK@3: 0.7191528545119705 common guesses: [('zigzag', 151), ('lightning', 70), ('squiggle', 59)]
+jail MAPK@3: 0.7173112338858194 common guesses: [('jail', 153), ('spreadsheet', 72), ('fence', 61)]
+potato MAPK@3: 0.7172739541160593 common guesses: [('potato', 400), ('circle', 144), ('cookie', 110)]
+sock MAPK@3: 0.7168284789644013 common guesses: [('sock', 250), ('foot', 152), ('toilet', 58)]
+mermaid MAPK@3: 0.7146371463714637 common guesses: [('mermaid', 219), ('parrot', 76), ('kangaroo', 38)]
+scissors MAPK@3: 0.7141577060931898 common guesses: [('scissors', 146), ('pliers', 84), ('violin', 30)]
+mailbox MAPK@3: 0.7125850340136054 common guesses: [('mailbox', 155), ('axe', 79), ('hammer', 69)]
+drill MAPK@3: 0.7119741100323624 common guesses: [('drill', 157), ('rifle', 80), ('diving board', 78)]
+rain MAPK@3: 0.7110016420361248 common guesses: [('rain', 156), ('animal migration', 81), ('lightning', 64)]
+airplane MAPK@3: 0.709795321637427 common guesses: [('airplane', 179), ('aircraft carrier', 66), ('ceiling fan', 48)]
+snorkel MAPK@3: 0.709051724137931 common guesses: [('snorkel', 184), ('saxophone', 70), ('hockey stick', 51)]
+hexagon MAPK@3: 0.705607476635514 common guesses: [('octagon', 185), ('hexagon', 184), ('pillow', 42)]
+radio MAPK@3: 0.7050653594771241 common guesses: [('radio', 169), ('stereo', 123), ('television', 71)]
+vase MAPK@3: 0.7043859649122806 common guesses: [('vase', 154), ('bottlecap', 57), ('hourglass', 57)]
+spider MAPK@3: 0.7037037037037037 common guesses: [('spider', 248), ('crab', 113), ('flashlight', 72)]
+ocean MAPK@3: 0.702020202020202 common guesses: [('ocean', 164), ('The Great Wall of China', 76), ('river', 63)]
+frying pan MAPK@3: 0.7016129032258065 common guesses: [('frying pan', 139), ('mouse', 44), ('spoon', 42)]
+knee MAPK@3: 0.7014925373134329 common guesses: [('knee', 319), ('leg', 85), ('elbow', 74)]
+camel MAPK@3: 0.6994535519125683 common guesses: [('camel', 144), ('horse', 50), ('sheep', 37)]
+nose MAPK@3: 0.696969696969697 common guesses: [('nose', 229), ('foot', 102), ('pear', 74)]
+cell phone MAPK@3: 0.6968864468864469 common guesses: [('cell phone', 146), ('telephone', 83), ('picture frame', 56)]
+hat MAPK@3: 0.6955223880597015 common guesses: [('hat', 263), ('flying saucer', 78), ('laptop', 45)]
+campfire MAPK@3: 0.6948590381426202 common guesses: [('campfire', 156), ('fireplace', 61), ('kangaroo', 31)]
+scorpion MAPK@3: 0.6947791164658634 common guesses: [('scorpion', 187), ('squirrel', 70), ('frog', 48)]
+streetlight MAPK@3: 0.6945945945945946 common guesses: [('streetlight', 146), ('nail', 73), ('floor lamp', 62)]
+parachute MAPK@3: 0.693576388888889 common guesses: [('parachute', 155), ('diamond', 86), ('ice cream', 75)]
+underwear MAPK@3: 0.6934046345811051 common guesses: [('underwear', 154), ('anvil', 69), ('diamond', 55)]
+tooth MAPK@3: 0.6923758865248226 common guesses: [('tooth', 137), ('pants', 50), ('foot', 32)]
+lightning MAPK@3: 0.6915204678362573 common guesses: [('lightning', 179), ('zigzag', 115), ('squiggle', 64)]
+coffee cup MAPK@3: 0.6902173913043478 common guesses: [('coffee cup', 224), ('mug', 177), ('cup', 153)]
+grass MAPK@3: 0.69009009009009 common guesses: [('grass', 148), ('zigzag', 46), ('animal migration', 34)]
+foot MAPK@3: 0.6885245901639344 common guesses: [('foot', 235), ('sock', 71), ('elbow', 71)]
+golf club MAPK@3: 0.6871444823663253 common guesses: [('golf club', 225), ('hockey stick', 197), ('leg', 113)]
+horse MAPK@3: 0.6840796019900497 common guesses: [('horse', 210), ('dog', 163), ('cow', 135)]
+boomerang MAPK@3: 0.6829457364341084 common guesses: [('boomerang', 169), ('rainbow', 52), ('banana', 42)]
+teapot MAPK@3: 0.6823734729493891 common guesses: [('teapot', 141), ('coffee cup', 58), ('mouse', 43)]
+baseball bat MAPK@3: 0.681899641577061 common guesses: [('baseball bat', 139), ('marker', 97), ('golf club', 36)]
+flower MAPK@3: 0.6811926605504587 common guesses: [('flower', 170), ('stop sign', 51), ('fan', 49)]
+rifle MAPK@3: 0.6795366795366795 common guesses: [('rifle', 201), ('diving board', 79), ('saw', 40)]
+sword MAPK@3: 0.6774193548387096 common guesses: [('sword', 138), ('knife', 93), ('broom', 31)]
+rake MAPK@3: 0.6766809728183119 common guesses: [('rake', 186), ('broom', 151), ('giraffe', 41)]
+keyboard MAPK@3: 0.6761229314420805 common guesses: [('keyboard', 219), ('bench', 75), ('pool', 72)]
+octagon MAPK@3: 0.6756944444444444 common guesses: [('octagon', 193), ('hexagon', 179), ('circle', 129)]
+alarm clock MAPK@3: 0.6702508960573477 common guesses: [('alarm clock', 139), ('bear', 68), ('panda', 35)]
+floor lamp MAPK@3: 0.6693333333333333 common guesses: [('floor lamp', 184), ('shovel', 84), ('streetlight', 68)]
+zebra MAPK@3: 0.6681957186544344 common guesses: [('zebra', 165), ('tiger', 125), ('cow', 114)]
+kangaroo MAPK@3: 0.6679389312977099 common guesses: [('kangaroo', 199), ('parrot', 62), ('penguin', 34)]
+computer MAPK@3: 0.6666666666666666 common guesses: [('computer', 156), ('laptop', 146), ('calendar', 30)]
+see saw MAPK@3: 0.6658249158249159 common guesses: [('see saw', 143), ('rifle', 63), ('rake', 26)]
+couch MAPK@3: 0.6648148148148147 common guesses: [('couch', 129), ('cooler', 49), ('piano', 36)]
+squirrel MAPK@3: 0.6645480225988701 common guesses: [('squirrel', 174), ('saxophone', 38), ('kangaroo', 37)]
+shovel MAPK@3: 0.6638257575757576 common guesses: [('shovel', 137), ('key', 57), ('house plant', 31)]
+hot dog MAPK@3: 0.663003663003663 common guesses: [('hot dog', 212), ('pool', 58), ('bathtub', 55)]
+light bulb MAPK@3: 0.6611721611721613 common guesses: [('light bulb', 145), ('hot air balloon', 119), ('skull', 40)]
+lighter MAPK@3: 0.6602564102564102 common guesses: [('lighter', 140), ('candle', 91), ('lipstick', 41)]
+broom MAPK@3: 0.6600378787878788 common guesses: [('broom', 141), ('rake', 109), ('paintbrush', 58)]
+leaf MAPK@3: 0.6596119929453262 common guesses: [('leaf', 148), ('feather', 95), ('paper clip', 35)]
+sweater MAPK@3: 0.6593001841620627 common guesses: [('sweater', 161), ('jacket', 154), ('t-shirt', 131)]
+tractor MAPK@3: 0.6590909090909091 common guesses: [('tractor', 135), ('bulldozer', 62), ('truck', 38)]
+cello MAPK@3: 0.6585185185185185 common guesses: [('cello', 171), ('violin', 166), ('guitar', 134)]
+speedboat MAPK@3: 0.6584216725559481 common guesses: [('speedboat', 219), ('aircraft carrier', 76), ('beach', 61)]
+wheel MAPK@3: 0.6577669902912622 common guesses: [('wheel', 164), ('pizza', 113), ('basketball', 85)]
+swan MAPK@3: 0.6550218340611353 common guesses: [('swan', 175), ('duck', 112), ('saxophone', 64)]
+bathtub MAPK@3: 0.6520356234096693 common guesses: [('bathtub', 202), ('hot tub', 106), ('hot dog', 44)]
+moustache MAPK@3: 0.6518518518518519 common guesses: [('moustache', 199), ('snake', 72), ('ocean', 60)]
+toothbrush MAPK@3: 0.648936170212766 common guesses: [('toothbrush', 143), ('The Great Wall of China', 47), ('paintbrush', 35)]
+violin MAPK@3: 0.6482617586912066 common guesses: [('violin', 263), ('guitar', 206), ('cello', 178)]
+sheep MAPK@3: 0.644736842105263 common guesses: [('sheep', 147), ('rhinoceros', 46), ('cow', 38)]
+spreadsheet MAPK@3: 0.6412760416666667 common guesses: [('spreadsheet', 205), ('calendar', 156), ('dresser', 80)]
+submarine MAPK@3: 0.640819964349376 common guesses: [('submarine', 136), ('sink', 38), ('helicopter', 35)]
+castle MAPK@3: 0.6394927536231884 common guesses: [('castle', 141), ('The Great Wall of China', 43), ('church', 38)]
+belt MAPK@3: 0.6393728222996515 common guesses: [('belt', 212), ('wristwatch', 48), ('bandage', 38)]
+cloud MAPK@3: 0.6372007366482505 common guesses: [('cloud', 132), ('bush', 124), ('sheep', 50)]
+nail MAPK@3: 0.6365546218487395 common guesses: [('nail', 172), ('hammer', 90), ('streetlight', 81)]
+mug MAPK@3: 0.6362318840579709 common guesses: [('mug', 191), ('coffee cup', 184), ('cup', 180)]
+face MAPK@3: 0.635116598079561 common guesses: [('face', 183), ('smiley face', 126), ('cookie', 50)]
+finger MAPK@3: 0.6349206349206349 common guesses: [('finger', 186), ('skyscraper', 107), ('nail', 107)]
+smiley face MAPK@3: 0.6345811051693404 common guesses: [('smiley face', 150), ('face', 111), ('cookie', 30)]
+flamingo MAPK@3: 0.6345811051693404 common guesses: [('flamingo', 132), ('bird', 69), ('duck', 47)]
+cruise ship MAPK@3: 0.6344086021505376 common guesses: [('cruise ship', 143), ('aircraft carrier', 94), ('speedboat', 68)]
+suitcase MAPK@3: 0.6342105263157894 common guesses: [('suitcase', 145), ('toaster', 71), ('purse', 44)]
+map MAPK@3: 0.6336996336996337 common guesses: [('map', 141), ('postcard', 51), ('stove', 38)]
+peanut MAPK@3: 0.6335078534031413 common guesses: [('peanut', 145), ('potato', 71), ('ear', 35)]
+angel MAPK@3: 0.6333333333333333 common guesses: [('angel', 162), ('monkey', 70), ('bat', 48)]
+ceiling fan MAPK@3: 0.632183908045977 common guesses: [('ceiling fan', 131), ('fan', 43), ('scissors', 32)]
+motorbike MAPK@3: 0.6320261437908498 common guesses: [('motorbike', 219), ('bicycle', 198), ('tractor', 70)]
+canoe MAPK@3: 0.6308243727598567 common guesses: [('canoe', 140), ('banana', 53), ('bathtub', 50)]
+stethoscope MAPK@3: 0.6305916305916307 common guesses: [('stethoscope', 156), ('wine glass', 45), ('necklace', 29)]
+postcard MAPK@3: 0.6305114638447972 common guesses: [('postcard', 146), ('keyboard', 57), ('map', 44)]
+asparagus MAPK@3: 0.6291172595520421 common guesses: [('asparagus', 186), ('paintbrush', 98), ('pencil', 62)]
+calendar MAPK@3: 0.6273291925465838 common guesses: [('calendar', 385), ('spreadsheet', 210), ('dresser', 95)]
+mouth MAPK@3: 0.627062706270627 common guesses: [('mouth', 152), ('watermelon', 49), ('hot dog', 37)]
+train MAPK@3: 0.626736111111111 common guesses: [('train', 143), ('firetruck', 36), ('truck', 32)]
+axe MAPK@3: 0.624777183600713 common guesses: [('axe', 144), ('mailbox', 99), ('hammer', 77)]
+pencil MAPK@3: 0.6213768115942029 common guesses: [('pencil', 141), ('marker', 108), ('crayon', 96)]
+broccoli MAPK@3: 0.6208333333333332 common guesses: [('broccoli', 150), ('tree', 102), ('tennis racquet', 48)]
+fence MAPK@3: 0.6205128205128205 common guesses: [('fence', 143), ('The Great Wall of China', 44), ('castle', 44)]
+key MAPK@3: 0.6184573002754822 common guesses: [('key', 180), ('dumbbell', 45), ('shovel', 41)]
+birthday cake MAPK@3: 0.617737003058104 common guesses: [('birthday cake', 179), ('cake', 174), ('hot tub', 92)]
+hurricane MAPK@3: 0.616260162601626 common guesses: [('hurricane', 165), ('tornado', 105), ('camouflage', 55)]
+beard MAPK@3: 0.6135752688172043 common guesses: [('beard', 181), ('goatee', 133), ('basket', 50)]
+chandelier MAPK@3: 0.6111111111111112 common guesses: [('chandelier', 173), ('ceiling fan', 56), ('rake', 24)]
+dresser MAPK@3: 0.611111111111111 common guesses: [('dresser', 135), ('spreadsheet', 55), ('passport', 39)]
+spoon MAPK@3: 0.6081560283687943 common guesses: [('spoon', 136), ('key', 64), ('shovel', 49)]
+megaphone MAPK@3: 0.607085346215781 common guesses: [('megaphone', 142), ('trumpet', 45), ('flashlight', 27)]
+bulldozer MAPK@3: 0.6057919621749409 common guesses: [('bulldozer', 200), ('tractor', 101), ('truck', 88)]
+car MAPK@3: 0.6036363636363636 common guesses: [('car', 193), ('police car', 131), ('pickup truck', 79)]
+shoe MAPK@3: 0.6031307550644567 common guesses: [('shoe', 130), ('foot', 46), ('sock', 44)]
+baseball MAPK@3: 0.6029411764705882 common guesses: [('baseball', 146), ('basketball', 122), ('soccer ball', 44)]
+police car MAPK@3: 0.5994897959183674 common guesses: [('police car', 148), ('car', 89), ('ambulance', 67)]
+lipstick MAPK@3: 0.5980902777777778 common guesses: [('lipstick', 140), ('marker', 72), ('crayon', 57)]
+firetruck MAPK@3: 0.5978915662650602 common guesses: [('firetruck', 250), ('ambulance', 130), ('bus', 118)]
+knife MAPK@3: 0.5974358974358973 common guesses: [('knife', 185), ('string bean', 56), ('screwdriver', 50)]
+goatee MAPK@3: 0.5944055944055944 common guesses: [('goatee', 208), ('beard', 141), ('necklace', 65)]
+stitches MAPK@3: 0.5921985815602837 common guesses: [('stitches', 129), ('lightning', 68), ('zigzag', 48)]
+grapes MAPK@3: 0.5911680911680911 common guesses: [('grapes', 160), ('blackberry', 99), ('camouflage', 40)]
+pizza MAPK@3: 0.5909863945578232 common guesses: [('pizza', 149), ('wheel', 101), ('basketball', 43)]
+bed MAPK@3: 0.5906432748538012 common guesses: [('bed', 118), ('bench', 46), ('The Great Wall of China', 31)]
+compass MAPK@3: 0.5894097222222222 common guesses: [('compass', 140), ('clock', 106), ('blueberry', 50)]
+barn MAPK@3: 0.5859030837004405 common guesses: [('barn', 156), ('house', 123), ('church', 71)]
+stereo MAPK@3: 0.5851449275362318 common guesses: [('stereo', 131), ('radio', 102), ('map', 45)]
+sandwich MAPK@3: 0.5850168350168351 common guesses: [('sandwich', 143), ('hamburger', 73), ('hot dog', 46)]
+river MAPK@3: 0.585 common guesses: [('river', 142), ('ocean', 72), ('waterslide', 38)]
+helmet MAPK@3: 0.5846994535519126 common guesses: [('helmet', 131), ('basket', 28), ('purse', 25)]
+rabbit MAPK@3: 0.5844062947067239 common guesses: [('rabbit', 161), ('scissors', 34), ('cat', 25)]
+feather MAPK@3: 0.5833333333333334 common guesses: [('feather', 127), ('leaf', 78), ('string bean', 22)]
+hospital MAPK@3: 0.5833333333333334 common guesses: [('hospital', 174), ('church', 49), ('dresser', 46)]
+rhinoceros MAPK@3: 0.5806831566548881 common guesses: [('rhinoceros', 192), ('dog', 84), ('cow', 54)]
+hockey puck MAPK@3: 0.5806100217864925 common guesses: [('hockey puck', 212), ('bottlecap', 71), ('hot tub', 42)]
+drums MAPK@3: 0.5792880258899676 common guesses: [('drums', 135), ('paint can', 31), ('eyeglasses', 23)]
+crocodile MAPK@3: 0.5789930555555556 common guesses: [('crocodile', 133), ('beach', 28), ('river', 27)]
+purse MAPK@3: 0.578853046594982 common guesses: [('purse', 127), ('basket', 62), ('bucket', 42)]
+sink MAPK@3: 0.5761448349307774 common guesses: [('sink', 216), ('cake', 50), ('birthday cake', 44)]
+syringe MAPK@3: 0.5759803921568627 common guesses: [('syringe', 132), ('marker', 38), ('carrot', 31)]
+pillow MAPK@3: 0.5726256983240223 common guesses: [('pillow', 126), ('keyboard', 58), ('square', 48)]
+stove MAPK@3: 0.5723809523809524 common guesses: [('stove', 119), ('calendar', 65), ('oven', 53)]
+bee MAPK@3: 0.5723443223443224 common guesses: [('bee', 128), ('grapes', 42), ('butterfly', 24)]
+flip flops MAPK@3: 0.5719489981785063 common guesses: [('flip flops', 118), ('sleeping bag', 47), ('binoculars', 29)]
+crab MAPK@3: 0.5715532286212914 common guesses: [('crab', 128), ('spider', 40), ('scorpion', 31)]
+lighthouse MAPK@3: 0.5709366391184573 common guesses: [('lighthouse', 163), ('palm tree', 54), ('diving board', 50)]
+church MAPK@3: 0.5695006747638325 common guesses: [('church', 172), ('hospital', 57), ('house', 41)]
+fireplace MAPK@3: 0.5683760683760684 common guesses: [('fireplace', 157), ('The Mona Lisa', 52), ('map', 44)]
+cactus MAPK@3: 0.5681818181818182 common guesses: [('cactus', 136), ('hand', 61), ('fire hydrant', 49)]
+waterslide MAPK@3: 0.5675029868578256 common guesses: [('waterslide', 191), ('roller coaster', 50), ('river', 49)]
+hedgehog MAPK@3: 0.567219152854512 common guesses: [('hedgehog', 115), ('camouflage', 28), ('helicopter', 24)]
+toilet MAPK@3: 0.5666666666666667 common guesses: [('toilet', 136), ('sock', 27), ('chair', 26)]
+saw MAPK@3: 0.5659340659340659 common guesses: [('saw', 120), ('train', 34), ('rifle', 28)]
+elbow MAPK@3: 0.5614035087719299 common guesses: [('elbow', 136), ('arm', 56), ('boomerang', 48)]
+skyscraper MAPK@3: 0.5609903381642511 common guesses: [('skyscraper', 188), ('door', 94), ('finger', 56)]
+onion MAPK@3: 0.5603015075376885 common guesses: [('onion', 132), ('watermelon', 62), ('basketball', 35)]
+bracelet MAPK@3: 0.5537037037037037 common guesses: [('bracelet', 121), ('necklace', 52), ('bottlecap', 46)]
+fire hydrant MAPK@3: 0.5501618122977346 common guesses: [('fire hydrant', 138), ('cactus', 54), ('lantern', 37)]
+microphone MAPK@3: 0.5497237569060773 common guesses: [('microphone', 125), ('tennis racquet', 43), ('key', 35)]
+hockey stick MAPK@3: 0.5442176870748299 common guesses: [('hockey stick', 152), ('golf club', 131), ('leg', 59)]
+basketball MAPK@3: 0.5439469320066336 common guesses: [('basketball', 147), ('soccer ball', 72), ('wheel', 72)]
+necklace MAPK@3: 0.5423572744014733 common guesses: [('necklace', 121), ('goatee', 38), ('light bulb', 32)]
+owl MAPK@3: 0.5418300653594772 common guesses: [('owl', 170), ('panda', 48), ('penguin', 42)]
+shark MAPK@3: 0.5403508771929824 common guesses: [('shark', 127), ('dolphin', 91), ('whale', 48)]
+ant MAPK@3: 0.5372340425531914 common guesses: [('ant', 118), ('dog', 29), ('tiger', 20)]
+cake MAPK@3: 0.5363475177304964 common guesses: [('cake', 143), ('birthday cake', 136), ('hot tub', 94)]
+flying saucer MAPK@3: 0.5350877192982456 common guesses: [('flying saucer', 137), ('hat', 86), ('submarine', 54)]
+duck MAPK@3: 0.5326797385620915 common guesses: [('duck', 134), ('bird', 97), ('parrot', 67)]
+cannon MAPK@3: 0.5305164319248826 common guesses: [('cannon', 131), ('key', 40), ('skateboard', 30)]
+dolphin MAPK@3: 0.5282331511839709 common guesses: [('dolphin', 118), ('shark', 37), ('boomerang', 37)]
+watermelon MAPK@3: 0.5275 common guesses: [('watermelon', 138), ('basketball', 40), ('mouth', 35)]
+remote control MAPK@3: 0.525 common guesses: [('remote control', 118), ('door', 42), ('marker', 28)]
+panda MAPK@3: 0.5243664717348927 common guesses: [('panda', 117), ('bear', 71), ('raccoon', 41)]
+oven MAPK@3: 0.5235798499464094 common guesses: [('oven', 226), ('dishwasher', 96), ('microwave', 84)]
+pickup truck MAPK@3: 0.5203045685279187 common guesses: [('pickup truck', 134), ('truck', 123), ('car', 48)]
+cow MAPK@3: 0.5198198198198198 common guesses: [('cow', 134), ('dog', 63), ('zebra', 55)]
+pig MAPK@3: 0.5195729537366548 common guesses: [('pig', 178), ('bear', 72), ('cat', 49)]
+wristwatch MAPK@3: 0.5183673469387755 common guesses: [('wristwatch', 146), ('flashlight', 78), ('belt', 50)]
+school bus MAPK@3: 0.5163043478260869 common guesses: [('school bus', 153), ('bus', 142), ('firetruck', 82)]
+leg MAPK@3: 0.5151515151515151 common guesses: [('leg', 122), ('golf club', 70), ('foot', 49)]
+guitar MAPK@3: 0.5119705340699815 common guesses: [('violin', 153), ('guitar', 146), ('cello', 97)]
+bread MAPK@3: 0.5101289134438306 common guesses: [('bread', 115), ('t-shirt', 30), ('pond', 26)]
+trumpet MAPK@3: 0.5098039215686274 common guesses: [('trumpet', 161), ('trombone', 126), ('clarinet', 87)]
+lion MAPK@3: 0.5073260073260074 common guesses: [('lion', 107), ('dog', 25), ('alarm clock', 25)]
+bench MAPK@3: 0.506872852233677 common guesses: [('bench', 139), ('table', 74), ('The Great Wall of China', 43)]
+backpack MAPK@3: 0.5052910052910053 common guesses: [('backpack', 120), ('baseball', 45), ('basketball', 39)]
+moon MAPK@3: 0.5036429872495446 common guesses: [('moon', 115), ('banana', 105), ('boomerang', 79)]
+basket MAPK@3: 0.5 common guesses: [('basket', 111), ('purse', 36), ('calendar', 25)]
+power outlet MAPK@3: 0.5 common guesses: [('power outlet', 168), ('passport', 112), ('traffic light', 64)]
+book MAPK@3: 0.5 common guesses: [('book', 116), ('passport', 88), ('dresser', 44)]
+animal migration MAPK@3: 0.4975845410628019 common guesses: [('animal migration', 124), ('ocean', 54), ('stitches', 31)]
+parrot MAPK@3: 0.49581839904420544 common guesses: [('parrot', 173), ('duck', 79), ('bird', 74)]
+brain MAPK@3: 0.49534883720930234 common guesses: [('brain', 136), ('soccer ball', 50), ('pizza', 41)]
+van MAPK@3: 0.49531459170013387 common guesses: [('van', 162), ('school bus', 110), ('bus', 99)]
+whale MAPK@3: 0.4933333333333334 common guesses: [('whale', 106), ('shark', 46), ('helicopter', 28)]
+paintbrush MAPK@3: 0.4863582443653618 common guesses: [('paintbrush', 187), ('asparagus', 85), ('carrot', 38)]
+bat MAPK@3: 0.47752808988764045 common guesses: [('bat', 100), ('angel', 22), ('airplane', 20)]
+truck MAPK@3: 0.4764309764309764 common guesses: [('truck', 137), ('pickup truck', 72), ('bus', 51)]
+ambulance MAPK@3: 0.47458893871449925 common guesses: [('ambulance', 148), ('firetruck', 108), ('police car', 56)]
+cup MAPK@3: 0.4720812182741117 common guesses: [('cup', 146), ('mug', 110), ('coffee cup', 108)]
+yoga MAPK@3: 0.4659540775930324 common guesses: [('yoga', 236), ('flower', 38), ('roller coaster', 33)]
+blackberry MAPK@3: 0.4585492227979275 common guesses: [('blackberry', 120), ('camouflage', 59), ('grapes', 55)]
+roller coaster MAPK@3: 0.4583333333333333 common guesses: [('roller coaster', 123), ('mountain', 31), ('squiggle', 28)]
+blueberry MAPK@3: 0.4453125 common guesses: [('blueberry', 106), ('apple', 42), ('potato', 31)]
+toe MAPK@3: 0.44300144300144306 common guesses: [('toe', 129), ('finger', 51), ('nail', 34)]
+marker MAPK@3: 0.442240779401531 common guesses: [('marker', 294), ('crayon', 172), ('pencil', 145)]
+diving board MAPK@3: 0.4418960244648318 common guesses: [('diving board', 233), ('streetlight', 59), ('rifle', 56)]
+dishwasher MAPK@3: 0.4411764705882352 common guesses: [('dishwasher', 144), ('oven', 118), ('cooler', 63)]
+trombone MAPK@3: 0.44064748201438847 common guesses: [('trombone', 161), ('trumpet', 63), ('speedboat', 45)]
+bush MAPK@3: 0.4383057090239411 common guesses: [('bush', 107), ('cloud', 85), ('brain', 29)]
+beach MAPK@3: 0.4370567375886525 common guesses: [('beach', 106), ('ocean', 55), ('river', 33)]
+fan MAPK@3: 0.4357723577235773 common guesses: [('fan', 123), ('tennis racquet', 47), ('wheel', 35)]
+telephone MAPK@3: 0.4322916666666667 common guesses: [('telephone', 103), ('banana', 33), ('cell phone', 31)]
+garden MAPK@3: 0.4313725490196078 common guesses: [('garden', 128), ('beach', 60), ('grass', 47)]
+screwdriver MAPK@3: 0.42952380952380953 common guesses: [('screwdriver', 98), ('knife', 49), ('shovel', 28)]
+binoculars MAPK@3: 0.42869875222816395 common guesses: [('binoculars', 99), ('eyeglasses', 42), ('tractor', 27)]
+paint can MAPK@3: 0.42831541218637986 common guesses: [('paint can', 121), ('bucket', 92), ('cup', 41)]
+hot tub MAPK@3: 0.4208103130755065 common guesses: [('hot tub', 102), ('cake', 53), ('birthday cake', 43)]
+crayon MAPK@3: 0.41794871794871796 common guesses: [('crayon', 127), ('marker', 109), ('pencil', 81)]
+sleeping bag MAPK@3: 0.4175925925925925 common guesses: [('sleeping bag', 95), ('remote control', 37), ('flip flops', 24)]
+bridge MAPK@3: 0.41416666666666674 common guesses: [('bridge', 125), ('rainbow', 40), ('The Great Wall of China', 23)]
+toaster MAPK@3: 0.41304347826086957 common guesses: [('toaster', 98), ('oven', 46), ('cooler', 43)]
+passport MAPK@3: 0.4078171091445427 common guesses: [('passport', 136), ('book', 66), ('postcard', 56)]
+pliers MAPK@3: 0.4002574002574002 common guesses: [('pliers', 148), ('scissors', 97), ('The Eiffel Tower', 32)]
+peas MAPK@3: 0.39849108367626884 common guesses: [('peas', 124), ('animal migration', 57), ('camouflage', 36)]
+bottlecap MAPK@3: 0.39710144927536234 common guesses: [('bottlecap', 123), ('bracelet', 25), ('hockey puck', 23)]
+pond MAPK@3: 0.39162112932604737 common guesses: [('pond', 103), ('potato', 65), ('pool', 36)]
+lantern MAPK@3: 0.3844444444444444 common guesses: [('lantern', 107), ('fire hydrant', 53), ('penguin', 29)]
+cat MAPK@3: 0.37747747747747745 common guesses: [('cat', 85), ('raccoon', 46), ('tiger', 38)]
+eraser MAPK@3: 0.3745318352059925 common guesses: [('eraser', 83), ('keyboard', 29), ('marker', 29)]
+cooler MAPK@3: 0.3737745098039216 common guesses: [('cooler', 202), ('oven', 82), ('dishwasher', 59)]
+tiger MAPK@3: 0.37362637362637363 common guesses: [('tiger', 94), ('cow', 75), ('zebra', 71)]
+snake MAPK@3: 0.36322463768115937 common guesses: [('snake', 94), ('river', 27), ('roller coaster', 23)]
+monkey MAPK@3: 0.3611111111111111 common guesses: [('monkey', 98), ('teddy-bear', 36), ('angel', 25)]
+elephant MAPK@3: 0.3603839441535777 common guesses: [('elephant', 92), ('dog', 46), ('horse', 37)]
+matches MAPK@3: 0.35956790123456783 common guesses: [('matches', 99), ('asparagus', 62), ('nail', 32)]
+sea turtle MAPK@3: 0.3509259259259259 common guesses: [('sea turtle', 82), ('car', 20), ('pig', 17)]
+The Great Wall of China MAPK@3: 0.3413793103448276 common guesses: [('The Great Wall of China', 154), ('river', 45), ('ocean', 36)]
+string bean MAPK@3: 0.3324022346368715 common guesses: [('string bean', 95), ('banana', 43), ('pencil', 41)]
+piano MAPK@3: 0.3314393939393939 common guesses: [('piano', 81), ('keyboard', 45), ('calendar', 25)]
+bird MAPK@3: 0.33001658374792703 common guesses: [('bird', 102), ('duck', 80), ('parrot', 61)]
+clarinet MAPK@3: 0.3131578947368421 common guesses: [('clarinet', 82), ('pencil', 34), ('trumpet', 26)]
+dog MAPK@3: 0.3114992721979622 common guesses: [('dog', 106), ('horse', 49), ('cow', 47)]
+arm MAPK@3: 0.3076923076923077 common guesses: [('arm', 84), ('elbow', 36), ('foot', 26)]
+pool MAPK@3: 0.29850746268656714 common guesses: [('pool', 97), ('pond', 32), ('keyboard', 31)]
+camouflage MAPK@3: 0.2929487179487179 common guesses: [('camouflage', 113), ('hurricane', 48), ('blackberry', 34)]
+frog MAPK@3: 0.2880055788005579 common guesses: [('frog', 98), ('scorpion', 20), ('rhinoceros', 16)]
+dragon MAPK@3: 0.27896613190730835 common guesses: [('dragon', 74), ('bird', 27), ('crocodile', 20)]
+bear MAPK@3: 0.26683087027914615 common guesses: [('bear', 86), ('panda', 47), ('pig', 36)]
+toothpaste MAPK@3: 0.2554991539763113 common guesses: [('toothpaste', 77), ('marker', 67), ('keyboard', 36)]
+steak MAPK@3: 0.2454710144927536 common guesses: [('steak', 67), ('potato', 47), ('pond', 37)]
+mouse MAPK@3: 0.2379182156133829 common guesses: [('mouse', 93), ('dolphin', 22), ('frying pan', 20)]
+squiggle MAPK@3: 0.2284644194756554 common guesses: [('squiggle', 77), ('ocean', 49), ('zigzag', 39)]
+mosquito MAPK@3: 0.21621621621621623 common guesses: [('mosquito', 62), ('ceiling fan', 25), ('scissors', 20)]
+lobster MAPK@3: 0.18009478672985782 common guesses: [('lobster', 64), ('dragon', 26), ('scorpion', 24)]
+raccoon MAPK@3: 0.15925925925925924 common guesses: [('raccoon', 46), ('tiger', 34), ('cat', 20)]
+aircraft carrier MAPK@3: 0.15714285714285714 common guesses: [('aircraft carrier', 51), ('speedboat', 47), ('cruise ship', 33)]
+garden hose MAPK@3: 0.1384335154826958 common guesses: [('garden hose', 43), ('snake', 32), ('snail', 21)]

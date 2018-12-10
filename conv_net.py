@@ -6,14 +6,14 @@ from datetime import datetime
 from util import *
 from model import *
 
-NUM_EPOCHS = 5
+NUM_EPOCHS = 20
 LEARNING_RATE = 1e-3
 NUM_CLASSES = 345
 BATCH_SIZE = 32
 
 USE_ALL = 1000000
-NUM_TRAINING = 10000#USE_ALL
-NUM_VALIDATION = 10000#USE_ALL
+NUM_TRAINING = USE_ALL
+NUM_VALIDATION = USE_ALL
 
 def get_scores(logits, y, is_test):
     index_to_category, _ = get_category_mappings()
