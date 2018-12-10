@@ -15,8 +15,8 @@ def compute_centroids():
     cnts = defaultdict(int)
     idx_to_category, _ = get_category_mappings()
     K = len(idx_to_category)
-    train_examples = np.load("data/split/train_examples.npy")
-    train_labels = np.load("data/split/train_labels.npy")
+    #train_examples = np.load("data/split/train_examples.npy")
+    #train_labels = np.load("data/split/train_labels.npy")
 
     examples_by_label = [train_examples[np.where(train_labels[:] == j)] for j in range(K)]
 
@@ -45,9 +45,9 @@ def create_centroids_dir():
     Create centroids directory to save results.
     """
     try:
-        os.makedirs("centroids_plus")
-        os.makedirs("centroids_plus/npy")
-        os.makedirs("centroids_plus/png")
+        os.makedirs("centroids_plus_normalized/")
+        os.makedirs("centroids_plus_normalized/npy")
+        os.makedirs("centroids_plus_normalized/png")
     except OSError:
         pass # already exists
 
@@ -60,9 +60,9 @@ def save_centroids(centroids):
         plt.imshow(np.reshape(centroid, (28, 28)), cmap='gray')
         plt.title(category)
 
-        save_path = os.path.join("centroids_plus", category)
-        plt.savefig("centroids_plus/png/"+category)
-        np.save("centroids_plus/npy/"+category, centroid)
+        save_path = os.path.join("centroids_plus_normalized", category)
+        plt.savefig("centroids_plus_normalized/png/"+category)
+        np.save("centroids_plus_normalized/npy/"+category, centroid)
         # plt.show()
 
 if __name__ == "__main__":
