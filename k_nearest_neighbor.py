@@ -72,7 +72,7 @@ def predict_labels_weighted(dists, y_train, y_val, k=1):
         weights = np.linspace(1.0, 0.0, k)
         votes = defaultdict(float)
         for j in range(k):
-            votes[closest[j][0]] += weights[j]
+            votes[closest[j][0]] += 1.0/np.sqrt(1.0*j+1.0) #1.0/closest[j][1] #1.0/np.sqrt(1.0*j+1.0) #weights[j]
 
         top = [(j, votes[j]) for j in sorted(votes, key=votes.get, reverse=True)]
         y_pred[y_val[i]].append([cat for cat, _ in top[:3]])
