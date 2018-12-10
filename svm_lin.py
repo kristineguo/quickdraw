@@ -7,6 +7,10 @@ from collections import defaultdict
 
 train_data, train_labels = load_dataset("train")
 eval_data, eval_labels = load_dataset("val")
+test_data, test_labels = load_dataset('test')
+print(train_labels.shape)
+print(eval_labels.shape)
+print(test_labels.shape)
 bias_data = np.zeros(train_data.shape)
 (train_data - np.mean(train_data, axis = 1)[:,None])/np.std(train_data, axis = 1)[:,None]
 eval_data = (eval_data - np.mean(eval_data, axis = 1)[:,None])/np.std(eval_data, axis = 1)[:,None]

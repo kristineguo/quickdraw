@@ -21,7 +21,7 @@ def get_scores(logits, y, is_test):
     for i in range(logits.shape[0]):
         pred[index_to_category[y[i]]].append([index_to_category[logits[i][j]] for j in range(3)])
     mapk3, acc = compute_scores(pred, verbose=is_test)
-    return mapk3, acc
+    return mapk3, acc/y.shape[0]
 
 def run_epoch(model, sess, x, y, is_training, lr=None, is_test=False):
     indices = np.arange(x.shape[0])

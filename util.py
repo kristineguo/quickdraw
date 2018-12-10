@@ -115,6 +115,7 @@ def get_groupings(per_category_mapk, num=2):
             if cat not in assignments:
                 assignments[cat] = assignment
                 groupings[assignment].add(cat)
+
     print(assignments)
     for i, grouping in groupings.items():
         print("="*10)
@@ -171,4 +172,4 @@ def compute_scores(pred, verbose=False):
         for category, acc, guess in per_category_mapk:
             print(category, "MAPK@3:", acc, "common guesses:", guess)
 
-    return mapk(actual, predicted), total_accuracy/len(actual)
+    return mapk(actual, predicted), total_accuracy
