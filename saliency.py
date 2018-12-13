@@ -2,8 +2,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import tensorflow as tf
+from datetime import datetime
 from skimage import io
-from scipy.ndimage.filters import gaussian_filter1d
 from model import *
 from util import *
 from conv_net import preprocess
@@ -24,29 +24,24 @@ def compute_saliency_map(model, sess, X, y):
     return saliency
 
 def compute_saliency_maps(model, sess, X, y):
-    saliency = np.zeros((X.shape[0], 28, 28))
-    for i in range(X.shape[0]):
+    saliency = np.zeros((len(X), 28, 28))
+    for i in range(len(X)):
         x = X[i].reshape((1, 28, 28, 1))
         saliency[i] = compute_saliency_map(model, sess, x, [y[i]]).reshape(28, 28)
     return saliency
 
-def show_saliency_maps(model, sess, X, y, mask):
+def show_saliency_maps(model, sess, ogX, X, y, mask):
     mask = np.asarray(mask)
     saliency = compute_saliency_maps(model, sess, X, y)
     for i in range(mask.size):
         plt.subplot(2, mask.size, i + 1)
-        plt.imshow(X[i].astype('uint8').reshape((28, 28, 1)))
+        plt.imshow(ogX[i])
         plt.axis('off')
         plt.subplot(2, mask.size, mask.size + i + 1)
         plt.imshow(saliency[i], cmap=plt.cm.hot)
-        print(saliency[i], saliency[i].shape)
-        a = saliency[i].reshape(28, 28, 1)
-        a = np.lib.pad(a, ((0,0), (0, 0), (0,2)), 'constant', constant_values=(0, 0))
-        a *= 255.0 / np.max(a)
-        io.imsave('saliency_' + str(i) + '.jpg', a.astype('uint8'))
         plt.axis('off')
-        plt.gcf().set_size_inches(10, 4)
-    plt.show()
+        plt.gcf().set_size_inches(10, 6)
+    plt.savefig('saliency_img.png')
 
 def get_mean_std(model, sess):
     x_train, y_train = load_dataset("train")
@@ -58,15 +53,36 @@ def get_saliency_maps(model, sess, saver, save_path, mean, std):
     saver.restore(sess, save_path + 'model.weights')
 
     x_test, y_test = load_dataset("test")
-    x_test, y_test, _, _ = preprocess(x_test, y_test, mean, std)
+    x_test_processed, y_test, _, _ = preprocess(x_test, y_test, mean, std)
+    x_test = np.reshape(x_test, (-1, 28, 28))
+
     index_to_category, _ = get_category_mappings()
+    ogX, X, y = [], [], []
+    apple, onion, blueberry = 0, 0, 0
     for i in range(y_test.shape[0]):
-        if index_to_category[y[i]] == 'apple':
-            show_saliency_maps(model, sess, np.array(x_test[i]), np.array(y[i]), np.arange(1))
-            break
+        if index_to_category[y_test[i]] == 'apple':
+            if apple == 12:
+                ogX.append(x_test[i])
+                X.append(x_test_processed[i])
+                y.append(y_test[i])
+            apple += 1
+        elif index_to_category[y_test[i]] == 'onion':
+            if onion == 19:
+                ogX.append(x_test[i])
+                X.append(x_test_processed[i])
+                y.append(y_test[i])
+            onion += 1
+        elif index_to_category[y_test[i]] == 'blueberry':
+            if blueberry == 11:
+                ogX.append(x_test[i])
+                X.append(x_test_processed[i])
+                y.append(y_test[i])
+            blueberry += 1
+
+    show_saliency_maps(model, sess, ogX, X, y, np.arange(len(X)))
 
 def main():
-    save_path = "weights/".format(datetime.now())
+    save_path = "weights/20181210_014226/".format(datetime.now())
     with tf.Graph().as_default():
         model = Model()
         saver = tf.train.Saver()
